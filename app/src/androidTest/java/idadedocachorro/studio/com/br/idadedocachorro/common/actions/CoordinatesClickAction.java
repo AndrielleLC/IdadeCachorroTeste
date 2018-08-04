@@ -1,4 +1,4 @@
-package com.example.heitorcolangelo.espressotests.common.actions;
+package idadedocachorro.studio.com.br.idadedocachorro.common.actions;
 
 import android.support.test.espresso.action.CoordinatesProvider;
 import android.support.test.espresso.action.GeneralClickAction;

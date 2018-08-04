@@ -1,4 +1,4 @@
-package com.example.heitorcolangelo.espressotests.common;
+package idadedocachorro.studio.com.br.idadedocachorro.common;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,7 +6,11 @@ import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.Espresso;
-import com.example.heitorcolangelo.espressotests.R;
+
+//import com.example.heitorcolangelo.espressotests.R;
+
+import idadedocachorro.studio.com.br.idadedocachorro.R;
+
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.pressImeActionButton;
@@ -27,7 +31,8 @@ import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withTagValue;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.example.heitorcolangelo.espressotests.common.actions.CallOnClickAction.callOnClick;
+//import static com.example.heitorcolangelo.espressotests.common.actions.CallOnClickAction.callOnClick;
+import static idadedocachorro.studio.com.br.idadedocachorro.common.actions.CallOnClickAction.callOnClick;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.Is.is;
 

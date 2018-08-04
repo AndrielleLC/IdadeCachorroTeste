@@ -1,26 +1,66 @@
-package idadedocachorro.studio.com.br.idadedocachorro;
+package idadedocachorro.studio.com.br.idadedocachorro.InstrumentedTests.Home;
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+import android.support.test.rule.ActivityTestRule;
 
+import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import idadedocachorro.studio.com.br.idadedocachorro.InstrumentedTests.Home.robot.RobotHome;
+import idadedocachorro.studio.com.br.idadedocachorro.MainActivity;
+import idadedocachorro.studio.com.br.idadedocachorro.common.ScreenRobot;
 
-/**
- * Instrumentation test, which will execute on an Android device.
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-@RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+//@RunWith(AndroidJUnit4.class)
+
+public class ExampleInstrumentedTest extends ScreenRobot {
+
+    @Rule
+    public ActivityTestRule<MainActivity>
+        mainActivityActivityTestRule = new ActivityTestRule<>(MainActivity.class, false,true);
+
+    @Before
+    public void test(){
+
+    }
+
     @Test
-    public void useAppContext() throws Exception {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
+    public void AutomacaoUmEncontrarTodosOsElementosDaTela(){
+        new RobotHome()
+                .checkImgHomeIsDisplayed()
+                .checkFieldYearsHome()
+                .checkBtnIsClickable();
+    }
 
-        assertEquals("idadedocachorro.studio.com.br.idadedocachorro", appContext.getPackageName());
+    @Test
+    public void AutomacaoDoisValidarTodosOsTextosDaTela(){
+        new RobotHome()
+                .checkHeaderAPP()
+                .checkTxtHome()
+                .checkTxtBtn();
+    }
+
+    @Test
+    public void AutomacaoTresValidarTextoComIdadeDoCachorro(){
+        new RobotHome()
+                .fillFieldYears()
+                .clickOnBtnHome()
+                .checkTxtIdade()
+                .checkIdadeValor();
+    }
+
+    @Test
+    public void AutomacaoQuatroValidarTextoComIdadeDoCachorroVazia(){
+        new RobotHome()
+                .checkImgHomeIsDisplayed()
+                .checkFieldYearsHome()
+                .checkBtnIsClickable()
+                .checkHeaderAPP()
+                .checkTxtHome()
+                .checkTxtBtn()
+                .clickOnBtnHome()
+                .checkIdadeVazia();
     }
 }
+
+
+
