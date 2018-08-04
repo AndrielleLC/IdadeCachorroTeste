@@ -26,39 +26,39 @@ public class ExampleInstrumentedTest extends ScreenRobot {
     @Test
     public void AutomacaoUmEncontrarTodosOsElementosDaTela(){
         new RobotHome()
-                .checkImgHomeIsDisplayed()
-                .checkFieldYearsHome()
-                .checkBtnIsClickable();
+                .checarImgCachorro()
+                .checarCampoIdade()
+                .checarSeBotaoClicavel();
     }
 
     @Test
     public void AutomacaoDoisValidarTodosOsTextosDaTela(){
         new RobotHome()
-                .checkHeaderAPP()
-                .checkTxtHome()
-                .checkTxtBtn();
+                .checkCabecalho()
+                .checarTxtHome()
+                .checarTxtBotao();
     }
 
     @Test
     public void AutomacaoTresValidarTextoComIdadeDoCachorro(){
         new RobotHome()
-                .fillFieldYears()
-                .clickOnBtnHome()
-                .checkTxtIdade()
-                .checkIdadeValor();
+                .preencherCampoIdade()
+                .clicarBtnHome()
+                .checarTxtIdade()
+                .checarIdadeValor();
     }
 
     @Test
     public void AutomacaoQuatroValidarTextoComIdadeDoCachorroVazia(){
         new RobotHome()
-                .checkImgHomeIsDisplayed()
-                .checkFieldYearsHome()
-                .checkBtnIsClickable()
-                .checkHeaderAPP()
-                .checkTxtHome()
-                .checkTxtBtn()
-                .clickOnBtnHome()
-                .checkIdadeVazia();
+                .checarImgCachorro()
+                .checarCampoIdade()
+                .checarSeBotaoClicavel()
+                .checkCabecalho()
+                .checarTxtHome()
+                .checarTxtBotao()
+                .clicarBtnHome()
+                .checarIdadeVazia();
     }
 }
 
